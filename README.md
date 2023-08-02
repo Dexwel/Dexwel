@@ -8,4 +8,4 @@
  
  📫 You can connect with me via https://www.linkedin.com/in/daniel-adediran/
 
- Please find my curicullum vitae for perusal: 
+ Please find my curicullum vitae for perusal: https://github.com/Dexwel/Dexwel/blob/main/Daniel-Adediran-Curicullum-Vitae.pdf
