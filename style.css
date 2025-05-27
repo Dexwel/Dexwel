@@ -1,0 +1,222 @@
+body {
+    background: #0a192f;
+    color: #ccd6f6;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    background: #112240;
+    width: 270px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+    box-shadow: 2px 0 12px rgba(10,25,47,0.08);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
+}
+.profile-pic-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    border: 4px solid #64ffda;
+    box-shadow: 0 2px 8px rgba(100,255,218,0.12);
+    background: #233554;
+    margin-top: 40px; /* Shift image down from the top */
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+.nav-link {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.7em 0.5em;
+    border-radius: 4px;
+    transition: background 0.18s, color 0.18s;
+    display: block;
+}
+.nav-link.active, .nav-link:hover {
+    background: #233554;
+    color: #64ffda;
+}
+.sidebar-social {
+    display: flex;
+    gap: 1.2em;
+    margin-top: 1.5em;
+}
+.sidebar-social a {
+    display: flex;
+    align-items: center;
+}
+.sidebar-social img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(0.2);
+    transition: filter 0.2s, transform 0.2s;
+}
+.sidebar-social a:hover img {
+    filter: grayscale(0) brightness(1.2);
+    transform: scale(1.1);
+}
+.content {
+    flex: 1;
+    padding: 3.5rem 3.5rem 2rem 3.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.section {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+.section.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+h1 {
+    color: #64ffda;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+h2 {
+    color: #ccd6f6;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+h3 {
+    color: #8892b0;
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+}
+.exp-block {
+    margin-bottom: 2em;
+}
+.exp-date {
+    color: #64ffda;
+    font-size: 0.95em;
+    font-weight: 400;
+    margin-left: 0.5em;
+}
+.resume-link {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.7em 1.2em;
+    background: transparent;
+    color: #64ffda;
+    border: 1.5px solid #64ffda;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.resume-link:hover {
+    background: #64ffda;
+    color: #0a192f;
+}
+.pub-block p {
+    margin-bottom: 1.2em;
+    color: #ccd6f6;
+    font-size: 1.05em;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    margin-top: 1em;
+}
+#contact-form input, #contact-form textarea {
+    padding: 0.6em;
+    border: 1px solid #233554;
+    border-radius: 4px;
+    font-size: 1em;
+    background: #112240;
+    color: #ccd6f6;
+}
+#contact-form button {
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 0.8em;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+#contact-form button:hover {
+    background: #233554;
+    color: #64ffda;
+}
+#form-message {
+    margin-top: 1em;
+    color: #64ffda;
+    font-weight: bold;
+}
+footer {
+    background: #112240;
+    color: #8892b0;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 2.5rem;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -2px 12px rgba(44,62,80,0.08);
+}
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        padding: 1.2rem 0.5rem;
+        position: static;
+    }
+    .profile-pic-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
+        margin-right: 1em;
+    }
+    .content {
+        padding: 1.2rem 0.5rem 2rem 0.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        padding: 0.5rem;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+}
